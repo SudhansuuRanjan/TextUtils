@@ -6,16 +6,19 @@ export default function TextForm(props) {
       //console.log("Uppercase was clicked"+ text);
       let newText = text.toUpperCase();
       setText(newText);
+      props.showAlert("Converted to uppercase!","success");
     }
     const handleLowClick = () => {
         //console.log("Uppercase was clicked"+ text);
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert("Converted to lowercase!","success");
       }
     const handleClrText= () => {
         //console.log("Uppercase was clicked"+ text);
         let newText = "";
         setText(newText);
+        props.showAlert("Text cleared!","warning");
       }
     const handleCapText= () => {
         //console.log("Uppercase was clicked"+ text);
@@ -23,11 +26,13 @@ export default function TextForm(props) {
             return (word.charAt(0).toUpperCase() + word.slice(1));
           }).join(' ');
         setText(newText);
+        props.showAlert("Converted to titlecase!","success");
   }
     const handleRevText= () => {
         //console.log("Uppercase was clicked"+ text);
         let newText = text.split("").reverse().join("");
         setText(newText);
+        props.showAlert("Text reversed!","success");
       }
 
     const handleOnChange = (event) => {
@@ -39,11 +44,13 @@ export default function TextForm(props) {
         var text = document.getElementById("myBox");
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Text copied to clipboard!","success");
         }
 
         const handleExtraSpaces = () => {
             let newText = text.split(/[ ]+/);
             setText(newText.join(" "));
+            props.showAlert("Extra spaces removed!","success");
             }
                
 
