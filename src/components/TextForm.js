@@ -69,7 +69,7 @@ export default function TextForm(props) {
             <button className="btn btn-primary mx-2 my-1" onClick={handleRevText}>Reverse Text</button>
             <button className="btn btn-primary mx-2 my-1" onClick={handleCapText}>Title Case Text</button>
             <button className="btn btn-primary mx-2 my-1" onClick={handleExtraSpaces}>Remove extra spaces</button>
-            <button className="btn btn-success mx-3 my-1" onClick={handleCopy}>Copy Text</button>
+            <button className="btn btn-success mx-2 my-1" onClick={handleCopy}>Copy Text</button>
             <button className="btn btn-danger my-1" onClick={handleClrText}>Clear Text</button>
 
         </div>
